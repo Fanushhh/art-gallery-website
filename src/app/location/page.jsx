@@ -11,6 +11,7 @@ import NavButton from "../components/NavButton/NavButton";
 
 
 export default function Location() {
+  
   const markerIcon = new divIcon({
     className: "",
     html: `<div style="width: 40px;
@@ -25,6 +26,11 @@ export default function Location() {
       border-radius: 50%;
       background-color: var(--gold);"></span></div>`,
   });
+
+  if (typeof window === 'undefined') {
+    return null; // or a loading spinner, etc.
+  }
+
   return (
     <>
     <NavButton customStyle='customButton' href="/" imgUrl='/icon-arrow-left.svg' text="Back to home"/>

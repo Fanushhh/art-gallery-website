@@ -27,7 +27,7 @@ export default function Location() {
       background-color: var(--gold);"></span></div>`,
   });
 
-  if (typeof window === 'undefined') {
+  if (process.env.BROWSER === false) {
     return null; // or a loading spinner, etc.
   }
 

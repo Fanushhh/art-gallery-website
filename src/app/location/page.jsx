@@ -9,12 +9,6 @@ import NavButton from "../components/NavButton/NavButton";
 
 
 export default function Location() {
-  
-  
-
-  if (process.env.BROWSER === false) {
-    return null; // or a loading spinner, etc.
-  }
 
   return (
     <>

@@ -1,30 +1,16 @@
 "use client";
 
 import { Footer } from "../components/Footer/Footer";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+
 import styles from "./location.module.css";
-import { divIcon } from "leaflet";
+import Map from "../components/Map/Map";
 import NavButton from "../components/NavButton/NavButton";
 
 
 
 export default function Location() {
   
-  const markerIcon = new divIcon({
-    className: "",
-    html: `<div style="width: 40px;
-      height: 40px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background-color: black;">
-      <span style="display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: var(--gold);"></span></div>`,
-  });
+  
 
   if (process.env.BROWSER === false) {
     return null; // or a loading spinner, etc.
@@ -33,26 +19,7 @@ export default function Location() {
   return (
     <>
     <NavButton customStyle='customButton' href="/" imgUrl='/icon-arrow-left.svg' text="Back to home"/>
-      <MapContainer
-        preferCanvas={true}
-        boxZoom={true}
-        center={[44.427, 26.102]}
-        zoom={15}
-        scrollWheelZoom={true}
-        style={{ height: "600px", width: "100%" }}
-      >
-      
-        <TileLayer
-          className={styles.mapContainer}
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[44.427, 26.102]} icon={markerIcon}>
-          <Popup>
-            Here is the Modern Art Gallery
-          </Popup>
-        </Marker>
-      </MapContainer>
+      <Map />
 
       <main className={styles.locationWrapper}>
         <section className={styles.locationContainer}>

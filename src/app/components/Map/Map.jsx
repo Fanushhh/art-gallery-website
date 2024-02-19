@@ -1,25 +1,30 @@
-"use client";
+'use client'
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { divIcon } from "leaflet";
 import dynamic from "next/dynamic";
 import styles from "./Map.module.css";
 
-const markerIcon = new divIcon({
-  className: "",
-  html: `<div style="width: 40px;
-      height: 40px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background-color: black;">
-      <span style="display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: var(--gold);"></span></div>`,
-});
+
+
 function Map() {
+  if (typeof window === 'undefined') {
+    return <p>loading...</p>; // or a loading spinner, etc.
+  }
+  const markerIcon = new divIcon({
+    className: "",
+    html: `<div style="width: 40px;
+        height: 40px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background-color: black;">
+        <span style="display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--gold);"></span></div>`,
+  });
   return (
     <>
       <MapContainer

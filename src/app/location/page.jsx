@@ -1,15 +1,15 @@
-"use client";
+
 
 import { Footer } from "../components/Footer/Footer";
 
 import styles from "./location.module.css";
-import Map from "../components/Map/Map";
 import NavButton from "../components/NavButton/NavButton";
-
+import dynamic from "next/dynamic";
+const Map = dynamic(async () => await import('../components/Map/Map'), { ssr: false })
 
 
 export default function Location() {
-
+  
   return (
     <>
     <NavButton customStyle='customButton' href="/" imgUrl='/icon-arrow-left.svg' text="Back to home"/>

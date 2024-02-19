@@ -5,7 +5,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "./location.module.css";
 import { divIcon } from "leaflet";
-import "leaflet-defaulticon-compatibility";
 import NavButton from "../components/NavButton/NavButton";
 
 

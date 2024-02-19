@@ -1,4 +1,5 @@
 "use client";
+
 import { Footer } from "../components/Footer/Footer";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";

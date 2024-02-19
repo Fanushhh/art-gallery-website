@@ -27,7 +27,7 @@ export default function Location() {
   return (
     <>
     <NavButton customStyle='customButton' href="/" imgUrl='/icon-arrow-left.svg' text="Back to home"/>
-      <MapContainer
+      {/* <MapContainer
         preferCanvas={true}
         boxZoom={true}
         center={[44.427, 26.102]}
@@ -46,7 +46,7 @@ export default function Location() {
             Here is the Modern Art Gallery
           </Popup>
         </Marker>
-      </MapContainer>
+      </MapContainer> */}
 
       <main className={styles.locationWrapper}>
         <section className={styles.locationContainer}>

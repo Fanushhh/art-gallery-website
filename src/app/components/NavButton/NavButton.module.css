@@ -1,0 +1,47 @@
+.navButton{
+    text-decoration: none;
+    color:white;
+    font-family: var(--ff-big-shoulders);
+    font-size:20px;
+    text-transform: uppercase;
+    letter-spacing: 3.64px;
+    font-weight: 700;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    margin-top:32px;
+    transition: all 500ms ease;
+    max-width: 260px;
+  }
+  .navButton:hover{
+    box-shadow: inset 350px 0 0 0 var(--gold);
+ 
+  }
+  
+  .navButton img{
+    background-color: var(--gold);
+    align-self: stretch;
+    width: 56px;
+    padding:24px;
+  }
+  .customButton{
+    position:absolute;
+    left:75px;
+    top:0;
+    flex-direction: row-reverse;
+    
+    padding-right:24px;
+    margin-top: 0;
+    padding-left: 0;
+    z-index:9999;
+    
+    
+}
+.customButton:hover{
+    box-shadow: inset -350px 0 0 0 var(--gold);
+}
+.customButton img{
+    margin-right: 32px;
+}

@@ -1,0 +1,45 @@
+.mapContainer {
+    filter: grayscale(100%);
+}
+
+
+.locationWrapper{
+    background-color: black;
+    color:white;
+    
+}
+.locationContainer{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding:100px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.locationContainer h1{
+    font-size:var(--fs-heading-l);
+    line-height:var(--heading-l-spacing);
+    text-transform: uppercase;
+}
+.locationContainer div{
+    max-width: 540px;
+    width: 100%;
+    font-family: var(--ff-outfit);
+    font-size: var(--fs-body-m);
+    font-weight: 100;
+}
+.locationContainer div p{
+    margin-top:24px;
+}
+.accent{
+    color: var(--gold);
+    font-size:var(--fs-heading-s);
+    font-family: var(--ff-big-shoulders);
+    font-weight:900;
+}
+@media (max-width:1000px){
+    .locationContainer{
+        flex-direction: column;
+        
+        gap: 40px;
+    }
+}

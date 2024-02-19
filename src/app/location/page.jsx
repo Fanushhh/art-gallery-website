@@ -8,26 +8,27 @@ import { divIcon } from "leaflet";
 import "leaflet-defaulticon-compatibility";
 import NavButton from "../components/NavButton/NavButton";
 
-const markerIcon = new divIcon({
-  className: "",
-  html: `<div style="width: 40px;
-    height: 40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background-color: black;">
-    <span style="display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--gold);"></span></div>`,
-});
+
 
 export default function Location() {
+  const markerIcon = new divIcon({
+    className: "",
+    html: `<div style="width: 40px;
+      height: 40px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background-color: black;">
+      <span style="display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--gold);"></span></div>`,
+  });
   return (
     <>
     <NavButton customStyle='customButton' href="/" imgUrl='/icon-arrow-left.svg' text="Back to home"/>
-      {/* <MapContainer
+      <MapContainer
         preferCanvas={true}
         boxZoom={true}
         center={[44.427, 26.102]}
@@ -46,7 +47,7 @@ export default function Location() {
             Here is the Modern Art Gallery
           </Popup>
         </Marker>
-      </MapContainer> */}
+      </MapContainer>
 
       <main className={styles.locationWrapper}>
         <section className={styles.locationContainer}>
